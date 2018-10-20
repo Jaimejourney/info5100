@@ -1,7 +1,9 @@
+package Function;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+public class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> res = new ArrayList<>();
         int down = matrix.length - 1;
@@ -22,14 +24,14 @@ class Solution {
                 res.add(matrix[i][right]);
             }
             right--;
-            if(down - top >= 0) {
+            if (down - top >= 0) {
                 for (int i = right; i >= left; i--) {
                     res.add(matrix[down][i]);
                 }
                 down--;
             }
 
-            if(right - left >= 0) {
+            if (right - left >= 0) {
                 for (int i = down; i >= top; i--) {
                     res.add(matrix[left][i]);
                 }
@@ -38,6 +40,4 @@ class Solution {
         }
         return res;
     }
-
-
 }

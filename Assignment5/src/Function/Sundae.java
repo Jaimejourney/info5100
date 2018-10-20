@@ -1,3 +1,8 @@
+package Function;
+
+import Function.DessertShoppe;
+import Function.IceCream;
+
 public class Sundae extends IceCream {
     String topping;
     int toppingPrice;
@@ -15,6 +20,7 @@ public class Sundae extends IceCream {
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(topping+" ");
+        sb.append("Sundae ");
         sb.append("with" + "\n");
         sb.append(getName());
         String price = DessertShoppe.cents2dollarsAndCentsmethod(this.getCost());

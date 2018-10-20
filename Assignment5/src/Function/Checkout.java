@@ -1,3 +1,5 @@
+package Function;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class Checkout {
     }
 
     public int totalTax(){
-        return Math.round(totalCost()*DessertShoppe.taxRate);
+        return Math.round(totalCost()* DessertShoppe.taxRate);
     }
 
     public String toString(){
@@ -91,7 +93,7 @@ public class Checkout {
             checkout.enterItem(new Candy("Gummy Worms", 1.33, 89));
             checkout.enterItem(new Cookie("Chocolate Chip Cookies", 4, 399));
             checkout.enterItem(new Candy("Salt Water Taffy", 1.5, 209));
-            checkout.enterItem(new Candy("Candy Corn", 3.0, 109));
+            checkout.enterItem(new Candy("Function.Candy Corn", 3.0, 109));
 
             System.out.println("\nNumber of items: " + checkout.numberOfItems() + "\n");
             System.out.println("\nTotal cost: " + checkout.totalCost() + "\n");

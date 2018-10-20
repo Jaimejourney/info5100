@@ -1,3 +1,5 @@
+package Function;
+
 public abstract class Dessertitem {
     protected String name;
 
@@ -30,7 +32,7 @@ class DessertShoppe {
 
     public static String cents2dollarsAndCentsmethod(int cent){
         double tmp = cent/100.0;
-        String res = String.format("%.2f", tmp);//两位小数
+        String res = " "+String.format("%.2f", tmp)+" ";//两位小数
 
         return res.charAt(0) == '0'? res.substring(1): res;
     }

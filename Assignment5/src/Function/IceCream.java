@@ -1,21 +1,24 @@
-public class Candy extends Dessertitem {
-    double weight;
-    int price;
+package Function;
 
-    public Candy(String name, double weight, int price) {
+import Function.DessertShoppe;
+import Function.Dessertitem;
+
+public class IceCream extends Dessertitem {
+    int cost;
+
+    public IceCream(String name, int cost) {
         super(name);
-        this.weight = weight;
-        this.price = price;
+        this.cost = cost;
     }
 
     @Override
     public int getCost() {
-        return Math.round((float)(weight*price));
+        return cost;
     }
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append(weight+" lbs. @"+ DessertShoppe.cents2dollarsAndCentsmethod(price)+"/lb."+"\n"+getName());
+        sb.append(getName());
         String price = DessertShoppe.cents2dollarsAndCentsmethod(this.getCost());
         for (int i = 0; i < DessertShoppe.maxWidth-getName().length()-price.length(); i++) {
             sb.append(" ");
